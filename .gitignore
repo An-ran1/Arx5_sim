@@ -216,3 +216,24 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# MuJoCo 编译缓存
+*.mjb
+*.so
+
+# 大型网格文件（如果 STL 很大，用 Git LFS 代替）
+# assets/meshes/
+
+# 仿真输出（不需要版本管理）
+results/
+*.mp4
+*.avi
+
+# 数据文件
+*.npy
+*.npz
+*.csv
+
+# 系统文件
+.DS_Store
+Thumbs.db
