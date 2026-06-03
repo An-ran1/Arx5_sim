@@ -12,7 +12,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://ultron_v1.1_aa/meshes/base_link.STL"/>
+                <mesh filename="../assets/meshes/base_link.STL"/>
             </geometry>
             <material name="">
                 <color rgba="0.75294 0.75294 0.75294 1"/>
@@ -21,7 +21,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://ultron_v1.1_aa/meshes/base_link.STL"/>
+                <mesh filename="../assets/meshes/base_link.STL"/>
             </geometry>
         </collision>
     </link>
@@ -34,7 +34,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://ultron_v1.1_aa/meshes/link1.STL"/>
+                <mesh filename="../assets/meshes/link1.STL"/>
             </geometry>
             <material name="">
                 <color rgba="0.75294 0.75294 0.75294 1"/>
@@ -43,7 +43,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://ultron_v1.1_aa/meshes/link1.STL"/>
+                <mesh filename="../assets/meshes/link1.STL"/>
             </geometry>
         </collision>
     </link>
@@ -63,7 +63,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://ultron_v1.1_aa/meshes/link2.STL"/>
+                <mesh filename="../assets/meshes/link2.STL"/>
             </geometry>
             <material name="">
                 <color rgba="0.75294 0.75294 0.75294 1"/>
@@ -72,7 +72,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://ultron_v1.1_aa/meshes/link2.STL"/>
+                <mesh filename="../assets/meshes/link2.STL"/>
             </geometry>
         </collision>
     </link>
@@ -92,7 +92,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://ultron_v1.1_aa/meshes/link3.STL"/>
+                <mesh filename="../assets/meshes/link3.STL"/>
             </geometry>
             <material name="">
                 <color rgba="0.75294 0.75294 0.75294 1"/>
@@ -101,7 +101,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://ultron_v1.1_aa/meshes/link3.STL"/>
+                <mesh filename="../assets/meshes/link3.STL"/>
             </geometry>
         </collision>
     </link>
@@ -121,7 +121,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://ultron_v1.1_aa/meshes/link4.STL"/>
+                <mesh filename="../assets/meshes/link4.STL"/>
             </geometry>
             <material name="">
                 <color rgba="0.89804 0.91765 0.92941 1"/>
@@ -130,7 +130,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://ultron_v1.1_aa/meshes/link4.STL"/>
+                <mesh filename="../assets/meshes/link4.STL"/>
             </geometry>
         </collision>
     </link>
@@ -150,7 +150,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://ultron_v1.1_aa/meshes/link5.STL"/>
+                <mesh filename="../assets/meshes/link5.STL"/>
             </geometry>
             <material name="">
                 <color rgba="0.75294 0.75294 0.75294 1"/>
@@ -159,7 +159,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://ultron_v1.1_aa/meshes/link5.STL"/>
+                <mesh filename="../assets/meshes/link5.STL"/>
             </geometry>
         </collision>
     </link>
@@ -179,7 +179,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://ultron_v1.1_aa/meshes/link6.STL"/>
+                <mesh filename="../assets/meshes/link6.STL"/>
             </geometry>
             <material name="">
                 <color rgba="0.89804 0.91765 0.92941 1"/>
@@ -188,7 +188,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://ultron_v1.1_aa/meshes/link6.STL"/>
+                <mesh filename="../assets/meshes/link6.STL"/>
             </geometry>
         </collision>
     </link>
