@@ -15,7 +15,7 @@
                 <mesh filename="../assets/meshes/base_link.STL"/>
             </geometry>
             <material name="">
-                <color rgba="0.75294 0.75294 0.75294 1"/>
+                <color rgba="0.9 0.4 0.1 1.0"/>
             </material>
         </visual>
         <collision>
@@ -37,7 +37,7 @@
                 <mesh filename="../assets/meshes/link1.STL"/>
             </geometry>
             <material name="">
-                <color rgba="0.75294 0.75294 0.75294 1"/>
+                <color rgba="0.9 0.4 0.1 1.0"/>
             </material>
         </visual>
         <collision>
@@ -66,7 +66,7 @@
                 <mesh filename="../assets/meshes/link2.STL"/>
             </geometry>
             <material name="">
-                <color rgba="0.75294 0.75294 0.75294 1"/>
+                <color rgba="0.9 0.4 0.1 1.0"/>
             </material>
         </visual>
         <collision>
@@ -95,7 +95,7 @@
                 <mesh filename="../assets/meshes/link3.STL"/>
             </geometry>
             <material name="">
-                <color rgba="0.75294 0.75294 0.75294 1"/>
+                <color rgba="0.9 0.4 0.1 1.0"/>
             </material>
         </visual>
         <collision>
@@ -124,7 +124,7 @@
                 <mesh filename="../assets/meshes/link4.STL"/>
             </geometry>
             <material name="">
-                <color rgba="0.89804 0.91765 0.92941 1"/>
+                <color rgba="0.9 0.4 0.1 1.0"/>
             </material>
         </visual>
         <collision>
@@ -153,7 +153,7 @@
                 <mesh filename="../assets/meshes/link5.STL"/>
             </geometry>
             <material name="">
-                <color rgba="0.75294 0.75294 0.75294 1"/>
+                <color rgba="0.9 0.4 0.1 1.0"/>
             </material>
         </visual>
         <collision>
@@ -182,7 +182,7 @@
                 <mesh filename="../assets/meshes/link6.STL"/>
             </geometry>
             <material name="">
-                <color rgba="0.89804 0.91765 0.92941 1"/>
+                <color rgba="0.9 0.4 0.1 1.0"/>
             </material>
         </visual>
         <collision>
