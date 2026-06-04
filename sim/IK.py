@@ -52,8 +52,8 @@ pos_check = data.xpos[ee_id]
 print(f"验证末端位置: {np.round(pos_check, 4)}")
 print(f"位置误差:     {np.round(np.linalg.norm(pos_check - target_pos), 6)}")
 
-# 可视化结果
+# 可视化结果（纯运动学，不启动物理仿真）
 with mujoco.viewer.launch_passive(model, data) as viewer:
     while viewer.is_running():
-        mujoco.mj_step(model, data)
+        mujoco.mj_forward(model, data)   # 只更新位置，不做物理步进
         viewer.sync()
