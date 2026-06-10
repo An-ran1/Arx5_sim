@@ -124,53 +124,53 @@ print(f"扫过角度: 180°")
 # ─────────────────────────────────────────
 # 可视化仿真（先播轨迹1，再播轨迹2）
 # ─────────────────────────────────────────
-renderer = mujoco.Renderer(model, height=480, width=640)
-frames = []
+# renderer = mujoco.Renderer(model, height=480, width=640)
+# frames = []
 
-def capture_frame():
-    """截取当前帧"""
-    renderer.update_scene(data, camera=-1)  # -1 表示自由视角
-    return renderer.render().copy()
+# def capture_frame():
+#     """截取当前帧"""
+#     renderer.update_scene(data, camera=-1)  # -1 表示自由视角
+#     return renderer.render().copy()
 
-with mujoco.viewer.launch_passive(model, data) as viewer:
-    # 播放轨迹1
-    print("\n播放轨迹1：关节空间点到点...")
-    for q in traj_joint:
-        for i, angle in enumerate(q):
-            data.qpos[i] = angle
-        mujoco.mj_forward(model, data)
-        viewer.sync()
-        frames.append(capture_frame())
-        time.sleep(0.01)
+# with mujoco.viewer.launch_passive(model, data) as viewer:
+#     # 播放轨迹1
+#     print("\n播放轨迹1：关节空间点到点...")
+#     for q in traj_joint:
+#         for i, angle in enumerate(q):
+#             data.qpos[i] = angle
+#         mujoco.mj_forward(model, data)
+#         viewer.sync()
+#         frames.append(capture_frame())
+#         time.sleep(0.01)
 
-    time.sleep(0.5)
+#     time.sleep(0.5)
 
-    # 播放轨迹2
-    print("播放轨迹2：笛卡尔直线轨迹...")
-    for q in traj_cart:
-        for i, angle in enumerate(q):
-            data.qpos[i] = angle
-        mujoco.mj_forward(model, data)
-        viewer.sync()
-        frames.append(capture_frame())
-        time.sleep(0.01)
+#     # 播放轨迹2
+#     print("播放轨迹2：笛卡尔直线轨迹...")
+#     for q in traj_cart:
+#         for i, angle in enumerate(q):
+#             data.qpos[i] = angle
+#         mujoco.mj_forward(model, data)
+#         viewer.sync()
+#         frames.append(capture_frame())
+#         time.sleep(0.01)
 
-    time.sleep(0.5)
+#     time.sleep(0.5)
 
-    # 播放轨迹3
-    print("播放轨迹3：笛卡尔圆弧轨迹...")
-    for q in traj_arc:
-        for i, angle in enumerate(q):
-            data.qpos[i] = angle
-        mujoco.mj_forward(model, data)
-        viewer.sync()
-        frames.append(capture_frame())
-        time.sleep(0.01)
+#     # 播放轨迹3
+#     print("播放轨迹3：笛卡尔圆弧轨迹...")
+#     for q in traj_arc:
+#         for i, angle in enumerate(q):
+#             data.qpos[i] = angle
+#         mujoco.mj_forward(model, data)
+#         viewer.sync()
+#         frames.append(capture_frame())
+#         time.sleep(0.01)
 
-# 保存视频
-print("保存视频...")
-imageio.mimsave('results/simulation.mp4', frames, fps=30)
-print("视频已保存到 results/simulation.mp4")
+# # 保存视频
+# print("保存视频...")
+# imageio.mimsave('results/simulation.mp4', frames, fps=30)
+# print("视频已保存到 results/simulation.mp4")
 
 # ─────────────────────────────────────────
 # 画图
@@ -178,21 +178,21 @@ print("视频已保存到 results/simulation.mp4")
 fig = plt.figure(figsize=(18, 10))
 
 # 图1：轨迹1关节角
-ax1 = fig.add_subplot(231)
-for i in range(6):
-    ax1.plot(traj_joint[:, i], label=f'关节{i+1}')
-ax1.set_title('轨迹1：关节角度变化')
-ax1.set_xlabel('步数'); ax1.set_ylabel('角度 (rad)')
-ax1.legend(fontsize=7); ax1.grid(True)
+# ax1 = fig.add_subplot(231)
+# for i in range(6):
+#     ax1.plot(traj_joint[:, i], label=f'关节{i+1}')
+# ax1.set_title('轨迹1：关节角度变化')
+# ax1.set_xlabel('步数'); ax1.set_ylabel('角度 (rad)')
+# ax1.legend(fontsize=7); ax1.grid(True)
 
-# 图2：轨迹1末端路径
-ax2 = fig.add_subplot(232, projection='3d')
-ax2.plot(ee_traj1[:,0], ee_traj1[:,1], ee_traj1[:,2], 'b-', linewidth=2)
-ax2.scatter(*ee_traj1[0],  c='g', s=50, label='起点')
-ax2.scatter(*ee_traj1[-1], c='r', s=50, label='终点')
-ax2.set_title('轨迹1：末端3D路径')
-ax2.set_xlabel('X'); ax2.set_ylabel('Y'); ax2.set_zlabel('Z')
-ax2.legend()
+# # 图2：轨迹1末端路径
+# ax2 = fig.add_subplot(232, projection='3d')
+# ax2.plot(ee_traj1[:,0], ee_traj1[:,1], ee_traj1[:,2], 'b-', linewidth=2)
+# ax2.scatter(*ee_traj1[0],  c='g', s=50, label='起点')
+# ax2.scatter(*ee_traj1[-1], c='r', s=50, label='终点')
+# ax2.set_title('轨迹1：末端3D路径')
+# ax2.set_xlabel('X'); ax2.set_ylabel('Y'); ax2.set_zlabel('Z')
+# ax2.legend()
 
 # 图3：轨迹2关节角
 ax3 = fig.add_subplot(233)
@@ -211,22 +211,22 @@ ax4.set_title('轨迹2：笛卡尔直线末端路径')
 ax4.set_xlabel('X'); ax4.set_ylabel('Y'); ax4.set_zlabel('Z')
 ax4.legend()
 
-# 图5：轨迹3关节角
-ax5 = fig.add_subplot(235)
-for i in range(6):
-    ax5.plot(traj_arc[:, i], label=f'关节{i+1}')
-ax5.set_title('轨迹3：圆弧轨迹关节角')
-ax5.set_xlabel('步数'); ax5.set_ylabel('角度 (rad)')
-ax5.legend(fontsize=7); ax5.grid(True)
+# # 图5：轨迹3关节角
+# ax5 = fig.add_subplot(235)
+# for i in range(6):
+#     ax5.plot(traj_arc[:, i], label=f'关节{i+1}')
+# ax5.set_title('轨迹3：圆弧轨迹关节角')
+# ax5.set_xlabel('步数'); ax5.set_ylabel('角度 (rad)')
+# ax5.legend(fontsize=7); ax5.grid(True)
 
-# 图6：轨迹3末端路径
-ax6 = fig.add_subplot(236, projection='3d')
-ax6.plot(ee_traj3[:,0], ee_traj3[:,1], ee_traj3[:,2], 'm-', linewidth=2)
-ax6.scatter(*ee_traj3[0],  c='g', s=50, label='起点')
-ax6.scatter(*ee_traj3[-1], c='r', s=50, label='终点')
-ax6.set_title('轨迹3：圆弧末端路径')
-ax6.set_xlabel('X'); ax6.set_ylabel('Y'); ax6.set_zlabel('Z')
-ax6.legend()
+# # 图6：轨迹3末端路径
+# ax6 = fig.add_subplot(236, projection='3d')
+# ax6.plot(ee_traj3[:,0], ee_traj3[:,1], ee_traj3[:,2], 'm-', linewidth=2)
+# ax6.scatter(*ee_traj3[0],  c='g', s=50, label='起点')
+# ax6.scatter(*ee_traj3[-1], c='r', s=50, label='终点')
+# ax6.set_title('轨迹3：圆弧末端路径')
+# ax6.set_xlabel('X'); ax6.set_ylabel('Y'); ax6.set_zlabel('Z')
+# ax6.legend()
 
 plt.tight_layout()
 plt.savefig('results/trajectory_results.png', dpi=150)
